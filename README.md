@@ -1,51 +1,94 @@
-# AI Customer Behavior Analytics Dashboard
+# AI Customer Analytics Dashboard
 
-## Pages & Features
+AI-powered customer behavior analytics with actionable insights.
 
-### 1. Dashboard
-- Key metrics overview (sessions, conversions, revenue)
-- Real-time visitor activity feed
-- AI-generated insight cards (anomalies, trends)
-- Conversion funnel snapshot
+Part of [The Mehdi Verse](https://github.com/mxn2020) — a collection of open-source sample applications.
 
-### 2. Audience Segmentation
-- AI-powered auto-segments (high-value, at-risk, new)
-- Custom segment builder with behavioral filters
-- Segment comparison view
-- Segment size & growth trends
+## Tech Stack
 
-### 3. Journey Mapping
-- Visual customer journey flow diagram
-- Drop-off & bottleneck detection
-- Path comparison (converted vs. non-converted)
-- Touchpoint attribution analysis
+- **Frontend**: React 19 + TypeScript + Vite
+- **Backend**: [Shared Convex deployment](https://github.com/mxn2020/the-mehdi-verse-convex-backend)
+- **Auth**: Email/password via `@convex-dev/auth`
 
-### 4. Predictive Analytics
-- Churn prediction scores per customer
-- Lifetime value (LTV) forecasting
-- Next purchase probability
-- Recommended retention actions
+## Getting Started
 
-### 5. Behavior Explorer
-- Event timeline per user
-- Heatmap of in-app / on-site actions
-- Session replay integration
-- Cohort analysis (by signup date, source, plan)
+```bash
+npm install
+cp .env.example .env.local
+# Set VITE_CONVEX_URL to your deployment URL
+npm run dev
+```
 
-### 6. AI Insights
-- Auto-generated weekly insight reports
-- Anomaly detection alerts (traffic spikes, drop-offs)
-- Opportunity recommendations
-- Natural language query interface ("Why did signups drop last week?")
+## License
 
-### 7. Reports
-- Customizable report builder
-- Scheduled report delivery (email)
-- Metric comparison over time periods
-- Export as PDF / CSV
+MIT © Mehdi Nabhani
 
-### 8. Settings
-- Data source connections (website, app, CRM, payment)
-- Event tracking configuration
-- Privacy & anonymization rules
-- Team access & dashboard sharing
+---
+
+<details>
+<summary>📋 Original Feature Spec</summary>
+
+# {{APP_TITLE}}
+
+{{APP_DESCRIPTION}}
+
+Part of [The Mehdi Verse](https://github.com/mxn2020) — a collection of open-source sample applications.
+
+## Tech Stack
+
+- **Frontend**: React 19 + TypeScript + Vite
+- **Backend**: [Shared Convex deployment](https://github.com/mxn2020/the-mehdi-verse-convex-backend)
+- **Auth**: Email/password via `@convex-dev/auth`
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js 22+
+- A running [shared Convex backend](https://github.com/mxn2020/the-mehdi-verse-convex-backend)
+
+### Setup
+
+```bash
+# Install dependencies
+npm install
+
+# Create .env.local with your Convex URL
+cp .env.example .env.local
+# Edit .env.local and set VITE_CONVEX_URL to your deployment URL
+
+# Start the dev server
+npm run dev
+```
+
+Open [http://localhost:5173](http://localhost:5173) to view the app.
+
+## Scripts
+
+| Command | Description |
+|---------|-------------|
+| `npm run dev` | Start Vite dev server |
+| `npm run build` | Build for production |
+| `npm run preview` | Preview production build |
+| `npm run typecheck` | Run TypeScript type checking |
+
+## Project Structure
+
+```
+src/
+  main.tsx              # Entry point with ConvexAuthProvider
+  App.tsx               # Auth routing (Landing vs Dashboard)
+  App.css               # Component styles
+  index.css             # Global styles & design tokens
+  components/
+    Landing.tsx          # Marketing/landing page
+    SignIn.tsx           # Auth form (sign-in/sign-up)
+    Dashboard.tsx        # Authenticated app shell
+api.ts                   # Convex API types (from shared backend)
+```
+
+## License
+
+MIT © Mehdi Nabhani
+
+</details>
